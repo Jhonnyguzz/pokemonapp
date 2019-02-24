@@ -1,17 +1,13 @@
 package com.endava.jguzman.jhonatan;
 
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.endava.jguzman.jhonatan.model.ConsumePokemonApi;
 
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import me.sargunvohra.lib.pokekotlin.client.PokeApi;
-import me.sargunvohra.lib.pokekotlin.client.PokeApiClient;
 import me.sargunvohra.lib.pokekotlin.model.NamedApiResource;
 
 public class MainActivity extends AppCompatActivity {
