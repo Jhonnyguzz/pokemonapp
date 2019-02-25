@@ -23,16 +23,16 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
     @NonNull
     @Override
     public PersonViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int item) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_main, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_holder, viewGroup, false);
         PersonViewHolder pvh = new PersonViewHolder(v);
         return pvh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull PersonViewHolder holder, int position) {
-        holder.id.setText(String.valueOf(pokemons.get(position).getId()));
+        //holder.id.setText(String.valueOf(pokemons.get(position).getId()));
         holder.name.setText(pokemons.get(position).getName());
-        holder.category.setText(pokemons.get(position).getCategory());
+        //holder.category.setText(pokemons.get(position).getCategory());
     }
 
     @Override
@@ -42,16 +42,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
 
     public static class PersonViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
-        TextView id;
         TextView name;
-        TextView category;
 
         PersonViewHolder(View itemView) {
             super(itemView);
-            cv = itemView.findViewById(R.id.my_card_view);
-            id = itemView.findViewById(R.id.id_value);
-            name = itemView.findViewById(R.id.name_value);
-            category = itemView.findViewById(R.id.category_value);
+            cv = itemView.findViewById(R.id.card_view_layout);
+            //id = itemView.findViewById(R.id.id_value);
+            name = itemView.findViewById(R.id.pokemon_name);
+            //category = itemView.findViewById(R.id.category_value);
         }
     }
 }
