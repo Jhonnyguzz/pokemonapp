@@ -13,7 +13,7 @@ public class ConsumePokemonApi extends AsyncTask<Void,Void,List<NamedApiResource
     @Override
     protected List<NamedApiResource> doInBackground(Void... voids) {
         PokeApi pokeApis = new PokeApiClient();
-        return pokeApis.getPokemonList(1,151).getResults();
+        return pokeApis.getPokemonList(0,151).getResults();
     }
 
 }
